@@ -1,4 +1,4 @@
-const { updateIngredientsQty,getAllBeverages } = require("../DB/db")
+const { updateIngredientsQty,getAllBeverages, addBeverages } = require("../DB/db")
 module.exports.orderBeverage = async (req, res, next) => {
   const ingredients = req.body.ingredients
   for (var key in ingredients) {
@@ -16,4 +16,12 @@ module.exports.getAllBeverages = async (req, res, next) => {
     response.push(beverage.name)
   });
   res.send({done:true,beverages:response})
+}
+
+
+module.exports.createBeverages = async (req, res, next) => {
+  const name = req.body.name
+  const ingredient = req.body.ingredient
+  await addBeverages(name,ingredient)
+  res.send({done:true,message:"Beverage added"})
 }

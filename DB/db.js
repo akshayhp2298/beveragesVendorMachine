@@ -31,7 +31,10 @@ beverages.insert({
   ingredient: { water: 1, milk: 2, coffee: 1 }
 })
 
-
+//add ingredient
+module.exports.addIngredient = async(name,qty)=>{
+  ingredients.insert({name,qty})
+}
 //get one ingredient
 module.exports.getOneIngredient = (name)=>{
   let ingredient = ingredients.findOne({ name })
@@ -61,6 +64,10 @@ module.exports.getAllIngredients = () => {
     return ingredient
   }
 
+//add ingredient
+module.exports.addBeverages = async(name,ingredientsData)=>{
+  beverages.insert({name,ingredient:ingredientsData})
+}
 //get all beverages
 module.exports.getAllBeverages = () => {
   let beverage = beverages.find({})

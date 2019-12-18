@@ -36,17 +36,17 @@ Assumption :
 
 API calls
     Get All beverages
-    path : GET "/api/get/all/beverages"
+    path : GET "/api/beverages/get/all"
 
     Order beverages
-    path : POST "/api/order/beverages"
+    path : POST "/api/beverages/order"
     Required body with type of beverages in json format
     Example {
         "type":"black coffee"
     }
 
     Add Quantity of Ingredients
-    path : PUT "/api/add/ingredients/quantity/:ingredient/:quantity"
+    path : PUT "/api/ingredients/add/quantity/:ingredient/:quantity"
         :ingredient = name of Ingredient
         :quantity = quantity to be added
 

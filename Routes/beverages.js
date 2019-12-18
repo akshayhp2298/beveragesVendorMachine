@@ -1,18 +1,26 @@
 const express = require("express")
 const app = express.Router()
-const { validateAvailability, validateBeverageType } = require("../Validator")
+const { validateAvailability, validateBeverageType ,validateBeverage} = require("../Validator")
 const {
   orderBeverage,
-  getAllBeverages
+  getAllBeverages,
+  createBeverages
 } = require("../Controller/beveragesController")
 const { checkQty } = require("../Controller/notifyStaffController")
 app.post(
-  "/order/beverages",
+  "/beverages/order",
   validateBeverageType,
   validateAvailability,
   orderBeverage,
   checkQty
 )
-app.get("/get/all/beverages", getAllBeverages)
+
+app.post(
+  "/beverages/create",
+  validateBeverage,
+  createBeverages
+)
+
+app.get("/beverages/get/all", getAllBeverages)
 
 module.exports = app
