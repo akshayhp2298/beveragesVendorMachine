@@ -31,7 +31,8 @@ beverages.insert({
   ingredient: { water: 1, milk: 2, coffee: 1 }
 })
 
-//add ingredient
+
+//add ingredient qty
 module.exports.addIngredient = async(name,qty)=>{
   ingredients.insert({name,qty})
 }

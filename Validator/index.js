@@ -1,18 +1,14 @@
 const {
+  getOneIngredient,
   getIngredientsQty,
   getOneBeverage,
   getBeverageIngredient
 } = require("../DB/db")
 
 module.exports.validateIngredientQty = async (req, res, next) => {
-  const ingredient = req.params.ingredient
-  const qty = req.params.qty
-  if (!qty || !ingredient) {
-    res
-      .status(404)
-      .send({ done: false, message: "Ingredient or qty not found" })
-    return
-  }
+  const ingredient = req.params.ingredients
+  const qty = req.params.quantity
+  console.log(qty,ingredient)
   const ingredientDB = await getOneIngredient(ingredient)
   if (!ingredientDB) {
     res.status(404).send({ done: false, message: "Ingredient not found" })
@@ -39,9 +35,8 @@ module.exports.validateAvailability = async (req, res, next) => {
   for (var key in ingredients) {
     var value = ingredients[key]
     var current = await getIngredientsQty(key)
-    console.log(current)
     if (current < value) {
-      res.send("quantity not available")
+      res.status(404).send({done:false,message:"quantity not available"})
       return
     }
   }
@@ -49,6 +44,7 @@ module.exports.validateAvailability = async (req, res, next) => {
   next()
 }
 module.exports.validateIngredient = (req, res,next) => {
+  console.log(req.body)
   const qty = req.body.quantity
   const ingredient = req.body.ingredient
   if (!qty || !ingredient) {
@@ -70,9 +66,9 @@ module.exports.validateBeverage =async (req, res,next) => {
     return
   }
   for (var key in ingredient) {
-    var current = await getIngredientsQty(key)
+    var current = await getOneIngredient(key)
     if (!current) {
-      res.status(404).send("ingredient not available")
+      res.status(404).send({done:false,message:"ingredient not available"})
       return
     }
   }

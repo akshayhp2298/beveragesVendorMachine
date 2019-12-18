@@ -6,9 +6,4 @@ const routes = [ingredients, beverages]
 routes.forEach(route => {
   app.use("/api",route)
 })
-
-app.get("/ping", (req, res) => {
-  res.send("working")
-})
-
 module.exports = app

@@ -2,7 +2,8 @@
 Instruction to start
 npm install
 npm start
-
+for test case
+npm test
 Assumption :
     There are 4 beverages in system.
     1) Black Coffee
@@ -76,3 +77,4 @@ API calls
     If quantity not available then it will return 404 quantity not available.
     If quantity available then it will place order and decrease quantity in database
     After placing order it will check for quantity to notify staff
+    To add new beverages which has new ingredient that have to add ingredients first

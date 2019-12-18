@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="13" failures="0" time="1.612">
+  <testsuite name="tests/ingredient.test.js" errors="0" failures="0" skipped="0" timestamp="2019-12-18T05:33:01" time="0.943" tests="4">
+    <testcase classname="Post Endpoints should create a new ingredient" name="Post Endpoints should create a new ingredient" time="0.046">
+    </testcase>
+    <testcase classname="Post Endpoints should create a new ingredient" name="Post Endpoints should create a new ingredient" time="0.013">
+    </testcase>
+    <testcase classname="Post Endpoints should return ingredient not found for add quantity of ingredient" name="Post Endpoints should return ingredient not found for add quantity of ingredient" time="0.009">
+    </testcase>
+    <testcase classname="Post Endpoints should add quantity of ingredient" name="Post Endpoints should add quantity of ingredient" time="0.004">
+    </testcase>
+  </testsuite>
+  <testsuite name="tests/beverages.test.js" errors="0" failures="0" skipped="0" timestamp="2019-12-18T05:33:01" time="1.313" tests="9">
+    <testcase classname="Post Endpoints should return 404 for create a new beverages" name="Post Endpoints should return 404 for create a new beverages" time="0.046">
+    </testcase>
+    <testcase classname="Post Endpoints should return ingredient not available for create a new beverages" name="Post Endpoints should return ingredient not available for create a new beverages" time="0.006">
+    </testcase>
+    <testcase classname="Post Endpoints should create a new beverages" name="Post Endpoints should create a new beverages" time="0.003">
+    </testcase>
+    <testcase classname="Post Endpoints should get all beverages" name="Post Endpoints should get all beverages" time="0.003">
+    </testcase>
+    <testcase classname="Post Endpoints should return 404 for order beverages" name="Post Endpoints should return 404 for order beverages" time="0.003">
+    </testcase>
+    <testcase classname="Post Endpoints should order beverages" name="Post Endpoints should order beverages" time="0.003">
+    </testcase>
+    <testcase classname="Post Endpoints should order beverages" name="Post Endpoints should order beverages" time="0.003">
+    </testcase>
+    <testcase classname="Post Endpoints should order beverages" name="Post Endpoints should order beverages" time="0.004">
+    </testcase>
+    <testcase classname="Post Endpoints should return quantity not available for order beverages" name="Post Endpoints should return quantity not available for order beverages" time="0.002">
+    </testcase>
+  </testsuite>
+</testsuites>

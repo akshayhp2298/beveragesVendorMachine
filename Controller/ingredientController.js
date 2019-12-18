@@ -1,14 +1,14 @@
-const { addIngredient,createIngredient } = require("../DB/db")
+const { addIngredient,addIngredientsQty } = require("../DB/db")
 module.exports.addIngredientQty = async (req, res) => {
   const ingredient = req.params.ingredient
   const qty = req.params.quantity
-  await addIngredient(ingredient, qty)
+  await addIngredientsQty(ingredient, qty)
   res.send({ done: true, message: "ingredient quantity added" })
 }
 
-module.exports.createIngredient = async (req, res) => {
-  const ingredient = req.body.ingredient
+module.exports.createIngredients = async (req, res) => {
+  const ingredient = req.body.ingredients
   const qty = req.body.quantity
-  await createIngredient(ingredient, qty)
+  await addIngredient(ingredient, qty)
   res.send({ done: true, message: "ingredient added" })
 }

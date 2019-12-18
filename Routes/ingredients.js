@@ -3,12 +3,12 @@ const app = express.Router()
 const { validateIngredientQty,validateIngredient } = require("../Validator")
 const {
   addIngredientQty,
-  createIngredient
+  createIngredients
 } = require("../Controller/ingredientController")
 app.put(
   "/ingredients/add/quantity/:ingredients/:quantity",
   validateIngredientQty,
   addIngredientQty
 )
-app.post("/ingredients/create", validateIngredient, createIngredient)
+app.post("/ingredients/create", validateIngredient, createIngredients)
 module.exports = app
