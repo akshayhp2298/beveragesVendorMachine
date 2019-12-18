@@ -60,7 +60,7 @@ module.exports.validateIngredient = (req, res,next) => {
   next()
 }
 
-module.exports.validateBeverage = (req, res,next) => {
+module.exports.validateBeverage =async (req, res,next) => {
   const name = req.body.name
   const ingredient = req.body.ingredient
   if (!name || !ingredient) {

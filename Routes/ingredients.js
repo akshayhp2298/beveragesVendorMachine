@@ -1,6 +1,6 @@
 const express = require("express")
 const app = express.Router()
-const { validateIngredientQty } = require("../Validator")
+const { validateIngredientQty,validateIngredient } = require("../Validator")
 const {
   addIngredientQty,
   createIngredient
