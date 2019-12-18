@@ -1,10 +1,12 @@
+# Beverage Vending System
 
-Instruction to start
+## Instruction to start
+```bash
 npm install
 npm start
-for test case
-npm test
-Assumption :
+npm run test
+```
+## Assumption :
     There are 4 beverages in system.
     1) Black Coffee
     2) Sugarless Black Coffee
@@ -35,8 +37,8 @@ Assumption :
         Coffee : 1 unit
         Milk : 2 units
 
-API calls
-    create Ingredient
+## API calls
+    Create Ingredient
     path : POST "/api/ingredient/create"
     Required body with ingredient and quantity in json format
     Example {
@@ -44,7 +46,7 @@ API calls
         "quantity":10
     }
 
-    create beverages
+    Create Beverages
     path : POST "/api/beverages/create"
     Required body with name and required ingredient in units in json format
     Example {
@@ -56,10 +58,10 @@ API calls
         },
     }
 
-    Get All beverages
+    Get All Beverages
     path : GET "/api/beverages/get/all"
 
-    Order beverages
+    Order Beverages
     path : POST "/api/beverages/order"
     Required body with type of beverages in json format
     Example {
