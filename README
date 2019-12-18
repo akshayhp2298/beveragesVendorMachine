@@ -35,6 +35,26 @@ Assumption :
         Milk : 2 units
 
 API calls
+    create Ingredient
+    path : POST "/api/ingredient/create"
+    Required body with ingredient and quantity in json format
+    Example {
+        "ingredient":"coffee",
+        "quantity":10
+    }
+
+    create beverages
+    path : POST "/api/beverages/create"
+    Required body with name and required ingredient in units in json format
+    Example {
+        "name":"black coffee"
+        "ingredient":{
+            water:3,
+            coffee:1,
+            sugar:1
+        },
+    }
+
     Get All beverages
     path : GET "/api/beverages/get/all"
 
