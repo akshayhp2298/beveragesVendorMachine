@@ -20,19 +20,19 @@ npm run test
     4) Sugar
 
     Required ingredients to make beverages
-    1) Black Coffee :
+    1. Black Coffee :
         Water : 3 units
         Coffee : 1 unit
         Sugar : 1 unit
-    2) Sugarless Black Coffee :
+    2. Sugarless Black Coffee :
         Water : 3 units
         Coffee : 1 unit
-    3) Coffee with Milk :
+    3. Coffee with Milk :
         Water : 1 unit
         Milk : 2 units
         Coffee : 1 unit
         Sugar : 1 unit
-    4) Sugarless Coffee with Milk :
+    4. Sugarless Coffee with Milk :
         Water : 1 unit
         Coffee : 1 unit
         Milk : 2 units
@@ -73,10 +73,10 @@ npm run test
         :ingredient = name of Ingredient
         :quantity = quantity to be added
 
-    I have used loki.js for in-memory database. Database have two collections. 
-    One for Ingredients and One for beverages.
-    When a request arrives for order of beverages it check whether quantity available for that beverages or not.
-    If quantity not available then it will return 404 quantity not available.
-    If quantity available then it will place order and decrease quantity in database
-    After placing order it will check for quantity to notify staff
-    To add new beverages which has new ingredient that have to add ingredients first
+    * I have used loki.js for in-memory database. 
+    * Database have two collections. One for Ingredients and One for beverages.
+    * When a request arrives for order of beverages it check whether quantity available for that beverages or not.
+       If quantity not available then it will return 404 quantity not available.
+       If quantity available then it will place order and decrease quantity in database
+       After placing order it will check for quantity to notify staff
+    * To add new beverages which has new ingredient that have to add ingredients first
