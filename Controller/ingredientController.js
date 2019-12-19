@@ -1,4 +1,4 @@
-const { addIngredient,addIngredientsQty } = require("../DB/db")
+const { addIngredient,addIngredientsQty } = require("../DB/ingredients")
 module.exports.addIngredientQty = async (req, res) => {
   const ingredient = req.params.ingredient
   const qty = req.params.quantity

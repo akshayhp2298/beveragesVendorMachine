@@ -1,6 +1,6 @@
 const express = require("express")
 const app = express.Router()
-const { validateAvailability, validateBeverageType ,validateBeverage} = require("../Validator")
+const { validateAvailability, validateBeverageType ,validateBeverage} = require("../Validator/beveragesValidator")
 const {
   orderBeverage,
   getAllBeverages,

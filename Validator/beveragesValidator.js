@@ -1,22 +1,11 @@
 const {
-  getOneIngredient,
-  getIngredientsQty,
   getOneBeverage,
   getBeverageIngredient
-} = require("../DB/db")
-
-module.exports.validateIngredientQty = async (req, res, next) => {
-  const ingredient = req.params.ingredients
-  const qty = req.params.quantity
-  console.log(qty,ingredient)
-  const ingredientDB = await getOneIngredient(ingredient)
-  if (!ingredientDB) {
-    res.status(404).send({ done: false, message: "Ingredient not found" })
-    return
-  }
-  next()
-}
-
+} = require("../DB/beverages")
+const {
+  getOneIngredient,
+  getIngredientsQty,
+} = require("../DB/ingredients")
 module.exports.validateBeverageType = async (req, res, next) => {
   let type = req.body.type
   type = type.toLowerCase()
@@ -41,18 +30,6 @@ module.exports.validateAvailability = async (req, res, next) => {
     }
   }
   req.body.ingredients = ingredients
-  next()
-}
-module.exports.validateIngredient = (req, res,next) => {
-  console.log(req.body)
-  const qty = req.body.quantity
-  const ingredient = req.body.ingredient
-  if (!qty || !ingredient) {
-    res
-      .status(404)
-      .send({ done: false, message: "ingredient or quantity not found" })
-    return
-  }
   next()
 }
 

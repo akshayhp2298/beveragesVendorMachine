@@ -1,4 +1,4 @@
-const { getAllIngredients } = require("../DB/db")
+const { getAllIngredients } = require("../DB/ingredients")
 
 module.exports.checkQty = async() => {
     let ingredients = await getAllIngredients()
